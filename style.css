@@ -1,1 +1,129 @@
+/* ==========================
+   OPERATION CHAMPION ❤️
+   Premium UI - Part 1
+========================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050816;
+    color:#fff;
+    overflow-x:hidden;
+    min-height:100vh;
+}
+
+/* Background */
+
+.background{
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top,#183b72 0%,#050816 70%);
+    z-index:-3;
+}
+
+/* Ambient Glow */
+
+.ambient-glow{
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#2d7dff;
+    filter:blur(180px);
+    opacity:.18;
+
+    top:-150px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:-2;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:30px;
+}
+
+.small-title{
+
+    color:#7cb6ff;
+
+    font-size:18px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+}
+
+.hero h1{
+
+    font-size:55px;
+
+    line-height:1.2;
+
+    max-width:850px;
+
+    margin-bottom:25px;
+}
+
+.subtitle{
+
+    font-size:20px;
+
+    color:#d8d8d8;
+
+    max-width:700px;
+
+    margin-bottom:35px;
+}
+
+/* Button */
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    background:linear-gradient(45deg,#2d7dff,#7bb8ff);
+
+    color:white;
+
+    font-size:18px;
+
+    transition:.4s;
+}
+
+button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 35px #2d7dff;
+}
