@@ -150,3 +150,235 @@ body{
     opacity:0.8;
 
 }
+/* =========================
+   BUTTON DESIGN
+========================= */
+
+
+button{
+
+    padding:15px 35px;
+
+    margin-top:30px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        45deg,
+        #ff4d8d,
+        #ff0055
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:0.4s;
+
+    box-shadow:
+    0 0 20px rgba(255,0,100,0.5);
+
+}
+
+
+
+button:hover{
+
+    transform:scale(1.1);
+
+    box-shadow:
+    0 0 35px rgba(255,0,100,0.9);
+
+}
+
+
+
+
+/* =========================
+   WISH SECTION
+========================= */
+
+
+.wish-section{
+
+    min-height:80vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+
+
+.wish-card{
+
+    max-width:700px;
+
+    padding:40px;
+
+    text-align:center;
+
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,0.15);
+
+
+    animation:fadeUp 1s ease;
+
+}
+
+
+
+.wish-card h2{
+
+    font-size:35px;
+
+    margin-bottom:20px;
+
+    color:#ff7eb3;
+
+}
+
+
+
+.wish-card p{
+
+    line-height:1.8;
+
+    font-size:18px;
+
+    margin:10px;
+
+}
+
+
+
+
+/* =========================
+   JOURNEY SECTION
+========================= */
+
+
+.journey-section{
+
+    padding:60px 30px;
+
+    text-align:center;
+
+}
+
+
+
+.journey-section h2{
+
+    font-size:40px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.journey-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.journey-box{
+
+    width:280px;
+
+    padding:30px;
+
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(12px);
+
+
+    border-radius:20px;
+
+
+    transition:0.4s;
+
+
+}
+
+
+
+.journey-box:hover{
+
+    transform:
+    translateY(-15px);
+
+
+}
+
+
+
+.journey-box h3{
+
+    color:#ff7eb3;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.journey-box p{
+
+    opacity:0.85;
+
+}
+
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
