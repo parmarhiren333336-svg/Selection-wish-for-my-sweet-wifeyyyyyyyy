@@ -127,3 +127,172 @@ button:hover{
 
     box-shadow:0 0 35px #2d7dff;
 }
+/* ==========================
+   Journey Section
+========================== */
+
+.journey,
+.congrats,
+.secret,
+.ending{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.glass-card{
+    width:min(90%,700px);
+    padding:40px;
+    border-radius:25px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+.glass-card h2,
+.congrats h2,
+.ending h1{
+    font-size:clamp(2rem,5vw,3.5rem);
+    margin-bottom:20px;
+}
+
+.glass-card p,
+.congrats p,
+.secret p,
+.ending p{
+    max-width:700px;
+    color:#d8d8d8;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* Secret Message */
+
+#secretMessage{
+    margin-top:30px;
+    display:none;
+    animation:fadeUp .8s ease;
+}
+
+#revealBtn{
+    margin-top:25px;
+}
+
+/* Loader */
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#050816;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.loader-ball{
+    font-size:70px;
+    animation:spin 2s linear infinite;
+    margin-bottom:20px;
+}
+
+/* Floating Footballs */
+
+.floating-footballs{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.floating-footballs span{
+    position:absolute;
+    bottom:-80px;
+    font-size:28px;
+    animation:floatBall 14s linear infinite;
+}
+
+.floating-footballs span:nth-child(1){left:10%;animation-delay:0s;}
+.floating-footballs span:nth-child(2){left:30%;animation-delay:3s;}
+.floating-footballs span:nth-child(3){left:55%;animation-delay:6s;}
+.floating-footballs span:nth-child(4){left:75%;animation-delay:9s;}
+.floating-footballs span:nth-child(5){left:90%;animation-delay:12s;}
+
+/* Music Button */
+
+#musicBtn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    padding:0;
+    font-size:24px;
+    z-index:1000;
+}
+
+/* Animations */
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes floatBall{
+    from{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:38px;
+}
+
+.subtitle{
+    font-size:17px;
+}
+
+button{
+    width:100%;
+    max-width:320px;
+}
+
+.glass-card{
+    padding:30px 22px;
+}
+
+}
