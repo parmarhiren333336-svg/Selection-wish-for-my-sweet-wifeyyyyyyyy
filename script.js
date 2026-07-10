@@ -82,3 +82,85 @@ surpriseBtn.addEventListener("click", function(){
 
 
 });
+// =========================
+// MUSIC CONTROL
+// JAVASCRIPT PART 3
+// =========================
+
+
+const musicBtn = document.getElementById("musicBtn");
+
+
+// Yaha baad me apna song file add kar sakte hain
+
+const music = new Audio("music.mp3");
+
+
+music.loop = true;
+
+
+let isPlaying = false;
+
+
+
+musicBtn.addEventListener("click", function(){
+
+
+    if(isPlaying){
+
+
+        music.pause();
+
+        musicBtn.innerHTML = "🎵 Play Music";
+
+
+        isPlaying = false;
+
+
+    }
+
+    else{
+
+
+        music.play();
+
+        musicBtn.innerHTML = "⏸ Pause Music";
+
+
+        isPlaying = true;
+
+
+    }
+
+
+});
+
+
+
+// Button click glow effect
+
+const buttons = document.querySelectorAll("button");
+
+
+buttons.forEach(function(btn){
+
+
+    btn.addEventListener("click", function(){
+
+
+        btn.style.transform = "scale(0.95)";
+
+
+        setTimeout(function(){
+
+
+            btn.style.transform = "scale(1)";
+
+
+        },150);
+
+
+    });
+
+
+});
