@@ -1,96 +1,40 @@
-/* ==========================
-   OPERATION CHAMPION ❤️
-   JavaScript - Part 1
-========================== */
+// =========================
+// SELECTION WISH FOR MY SWEET WIFEYYYYYYYY ❤️
+// JAVASCRIPT PART 1
+// =========================
 
-const loader = document.getElementById("loader");
-const typing = document.getElementById("typing");
-const revealBtn = document.getElementById("revealBtn");
-const secretMessage = document.getElementById("secretMessage");
-const musicBtn = document.getElementById("musicBtn");
-const bgMusic = document.getElementById("bgMusic");
 
-const text =
-"Congratulations! ❤️";
+// Loader Control
 
-let i = 0;
+window.addEventListener("load", function(){
 
-/* --------------------------
-   Loader
--------------------------- */
+    const loader = document.getElementById("loader");
 
-window.addEventListener("load", () => {
+    setTimeout(function(){
 
-    setTimeout(() => {
+        loader.style.display = "none";
 
-        loader.style.transition = "opacity .8s ease";
+    }, 2500);
 
-        loader.style.opacity = "0";
-
-        setTimeout(() => {
-
-            loader.style.display = "none";
-
-        }, 800);
-
-    }, 2000);
 
 });
 
-/* --------------------------
-   Typewriter
--------------------------- */
 
-function typeWriter(){
 
-    if(i < text.length){
+// Open Wish Button
 
-        typing.textContent += text.charAt(i);
+const openWish = document.getElementById("openWish");
 
-        i++;
 
-        setTimeout(typeWriter,80);
+openWish.addEventListener("click", function(){
 
-    }
 
-}
+    document.querySelector(".wish-section")
+    .scrollIntoView({
 
-setTimeout(typeWriter,2200);
+        behavior:"smooth"
 
-/* --------------------------
-   Secret Message
--------------------------- */
+    });
 
-revealBtn.addEventListener("click",()=>{
-
-    secretMessage.style.display="block";
-
-    secretMessage.style.animation="fadeUp .8s ease";
-
-    revealBtn.style.display="none";
-
-});
-
-/* --------------------------
-   Music Button
--------------------------- */
-
-musicBtn.addEventListener("click",()=>{
-
-    if(bgMusic.paused){
-
-        bgMusic.play();
-
-        musicBtn.innerHTML="🔊";
-
-    }
-
-    else{
-
-        bgMusic.pause();
-
-        musicBtn.innerHTML="🎵";
-
-    }
 
 });
