@@ -93,7 +93,7 @@ const musicBtn = document.getElementById("musicBtn");
 
 // Yaha baad me apna song file add kar sakte hain
 
-const music = new Audio("music.mp3");
+const music = new Audio("music2.mp3");
 
 
 music.loop = true;
