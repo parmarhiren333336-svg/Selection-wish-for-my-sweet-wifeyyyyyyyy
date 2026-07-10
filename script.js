@@ -38,3 +38,47 @@ openWish.addEventListener("click", function(){
 
 
 });
+// =========================
+// SURPRISE BUTTON
+// JAVASCRIPT PART 2
+// =========================
+
+
+const surpriseBtn = document.getElementById("surpriseBtn");
+
+const surpriseMessage = document.getElementById("surpriseMessage");
+
+
+
+surpriseBtn.addEventListener("click", function(){
+
+
+    if(surpriseMessage.style.display === "block"){
+
+
+        surpriseMessage.style.display = "none";
+
+        surpriseBtn.innerHTML = "Open Surprise 💖";
+
+
+    }
+
+    else{
+
+
+        surpriseMessage.style.display = "block";
+
+        surpriseBtn.innerHTML = "Close Surprise ❤️";
+
+
+        surpriseMessage.scrollIntoView({
+
+            behavior:"smooth"
+
+        });
+
+
+    }
+
+
+});
